@@ -130,13 +130,6 @@ function AuctionInfo() {
                 }
             }
         }
-        console.log(previousFirst);
-        console.log(previousSecond);
-        console.log(previousThird);
-
-        console.log(currentFirst);
-        console.log(currentSecond);
-        console.log(currentThird);
         setPreviousBids(previousAllBids);
         setCurrentBids(currentAllBids);
         setPreviousFirst(previousFirst);
