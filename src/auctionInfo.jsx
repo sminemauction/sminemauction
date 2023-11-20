@@ -69,7 +69,8 @@ function AuctionInfo() {
         for(let i=0; i<logs.length; i++) {
             const bidder = {address: '', bid: 0};
             bidder.bid = parseInt(logs[i].args.value)/10**18;
-            bidder.address = logs[i].args.from
+            const address = logs[i].args.from;
+            bidder.address = '...' + address.substring(address.length - 5);
 
             const logsBlock = (logs[i].blockNumber).toString();
 
