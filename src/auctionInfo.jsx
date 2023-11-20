@@ -145,7 +145,8 @@ function AuctionInfo() {
 
     return(
         <>
-        {previousFirst ? 
+    {/*Conditional - does the variable previousFirst exist? - gives time for the data to load without site crashing  */}
+        {previousFirst ? {/* Yes it exist data is loaded, format website with data */}
             <div className='previousAuction'>
             <h2>Previous Auction</h2>
             <h3>1st - {previousFirst.address}</h3>
@@ -155,7 +156,8 @@ function AuctionInfo() {
             <h3>3rd - {previousThird.address}</h3>
             <h3>Bid - {previousThird.bid}</h3>
             </div>
-        : 
+        
+            :  /* No it does not exist yet, so what to display while waiting for data to load */
             <div className='previousAuction'>
             <h2>Previous Auction</h2>
             </div>}
