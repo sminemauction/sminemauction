@@ -11,8 +11,11 @@ import './auctionInfo.css'
     })
     
 function AuctionInfo() {
+    // previousBids = all bids from previous auction
     const [previousBids, setPreviousBids] = useState([]);
+    // currentBids = all bids from current auction
     const [currentBids, setCurrentBids] = useState([]);
+    //previousFirst, etc... = first, second, third highest bids form previus or current auction
     const [previousFirst, setPreviousFirst] = useState();
     const [previousSecond, setPreviousSecond] = useState();
     const [previousThird, setPreviousThird] = useState();
