@@ -27,7 +27,10 @@ function AuctionInfo() {
     useEffect(() => {
         async function getInfo() {
 
+////// Enter the block number at which the first auctino will statrt here /////////
         const startBlock = 18564887;
+ //////////////////////////////////////////////////////////////////
+            
         const blocksPerPeriod = 21600 //per 72h
 
         const currentBlock = await publicClient.getBlockNumber()
@@ -51,9 +54,11 @@ function AuctionInfo() {
         const logs = await publicClient.getLogs({
             address: "0x9778ac3d5a2f916aa9abf1eb85c207d990ca2655",
             event: parseAbiItem('event Transfer(address indexed from, address indexed to, uint256 value)'),
+    //////////  Uncomment bellow to filter by 0xDEAD   ///////////////////////////
             // args: {
             //     to: '0x000000000000000000000000000000000000dEaD'
             // },
+    ///////////////////////////////////////////////////////////////////////////////
             fromBlock: previousPeriodStart.toString(),
             toBlock: 'latest',
         })
