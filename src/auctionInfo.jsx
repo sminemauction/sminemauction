@@ -207,29 +207,7 @@ function AuctionInfo() {
         <div class="image-container">
             <img src={bild5} alt="Bild 5" width="640" height='100%'></img>
         </div>
-        <div>
-        <p color='FFFFFF'>
-  
-  Good morning and welcome to
-  
-  Sminemboy's
-  Quantumimmortal Surrealty
-  
-  ze Auction House of ze Sminem.
-  
-  
-  Here you bid on ze Lord's Reliquia and godly hand-crafted artworks by bringing your $OGSM to the sacrifice. 
-  Sminem create art for you. You bid by burning $OGSM.
-  
-  Zis is the next iteration of max-bidding-technology.
-  
-  Rules are simple: 
-  Highest bidder in given timeframe wins the auctioned item.
-  Second and third place get a consolation prize: SMINEMS NFT. https://opensea.io/collection/sminems
-  
-  Pro tip: You can buy $OGSM on f.e. 1Inch and add send to „0x000000000000000000000000000000000000dEaD“ in order to save on gas.
-  </p>
-  </div>
+    
   
             </div>
         : 
@@ -275,31 +253,7 @@ function AuctionInfo() {
         <div class="image-container">
             <img src={bild5} alt="Bild 5" width="640" height='100%'></img>
         </div>
-        <div>
-        <p color='FFFFFF'>
-  
-  Good morning and welcome to
-  
-  Sminemboy's
-  Quantumimmortal Surrealty
-  
-  ze Auction House of ze Sminem.
-  
-  
-  Here you bid on ze Lord's Reliquia and godly hand-crafted artworks by bringing your $OGSM to the sacrifice. 
-  Sminem create art for you. You bid by burning $OGSM.
-  
-  Zis is the next iteration of max-bidding-technology.
-  
-  Rules are simple: 
-  Highest bidder in given timeframe wins the auctioned item.
-  Second and third place get a consolation prize: SMINEMS NFT. https://opensea.io/collection/sminems
-  
-  Pro tip: You can buy $OGSM on f.e. 1Inch and add send to „0x000000000000000000000000000000000000dEaD“ in order to save on gas.
-  </p>
-  </div>
-  </div>
-            </div>}
+        }
         </>
 
     )
