@@ -9,15 +9,18 @@
 }
 
 .leaderboard {
+    color: white;
     float: left;
     margin-left: 5%;
 }
 
 .leaderItem {
+    color: white;
     margin-bottom: -7%;
 }
 
 .leaderItemLast {
+    color: white;
     margin-bottom: -7%;
     margin-right: 15%;
 }
