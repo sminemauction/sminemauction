@@ -3,6 +3,16 @@ import {  parseAbiItem, decodeEventLog, decodeFunctionData, transactionType } fr
 import { createPublicClient, http } from 'viem';
 import { mainnet } from 'wagmi';
 import './auctionInfo.css'
+import bild1 from './assets/bild1.jpg'
+import bild2_1 from './assets/bild2_1.jpg';
+import bild2_2 from './assets/bild2_2.jpg';
+import bild2_3 from './assets/bild2_3.jpg';
+import bild3_1 from './assets/bild3_1.jpg';
+import bild3_2 from './assets/bild3_2.jpg';
+import bild3_3 from './assets/bild3_3.jpg';
+import bild4 from './assets/bild4.jpg';
+import bild5 from './assets/bild5.jpg';
+import hosanna from './assets/hosanna.mp3';
 
 
     const  publicClient = createPublicClient({
@@ -20,7 +30,7 @@ function AuctionInfo() {
     const [currentSecond, setcurrentSecond] = useState();
     const [currentThird, setcurrentThird] = useState();
 
-    let audio = new Audio("./hosanna.mp3")
+    let audio = new Audio(hosanna)
 
     //-List of addresses that sent token from the contract "0x9778ac3d5a2f916aa9abf1eb85c207d990ca2655" to this address: 0x000000000000000000000000000000000000dEaD
     //-List shows top 3 addresses Sorted from high to low amount within 72H timeframe; after 72H a new list starts.
@@ -174,28 +184,28 @@ function AuctionInfo() {
                 <p>Bid - {currentThird.bid} </p>
                 </div>
         {/* <!-- Zeile 1 --> */}
-         <div className="image-container">
-            <img src="./bild1.jpg" alt="Bild 1" width="640" height="32"></img>
+        <div className="image-container">
+            <img src={bild1} alt="Bild 1" width="640" height="32"></img>
          </div>
          {/* <!-- Zeile 2 --> */}
         <div className="image-container">
-            <img src="bild2_1.jpg" alt="Bild 2.1" width='100%' height="100"></img>
-            <img src="bild2_2.jpg" alt="Bild 2.2" width="150" height="100"></img>
-            <img src="bild2_3.jpg" alt="Bild 2.3" width='100%' height="100"></img>
+            <img src={bild2_1} alt="Bild 2.1" width='100%' height="100"></img>
+            <img src={bild2_2} alt="Bild 2.2" width="150" height="100"></img>
+            <img src={bild2_3} alt="Bild 2.3" width='100%' height="100"></img>
         </div>
         {/* <!-- Zeile 3 --> */}
         <div className="image-container">
-            <img src="bild3_1.jpg" alt="Bild 3.1" width='100%' height="30"></img>
-            <img src="bild3_2.jpg" alt="Bild 3.2" width='100%' height="30"></img>
-            <img src="bild3_3.jpg" alt="Bild 3.3" width='100%' height="30"></img>
+            <img src={bild3_1} alt="Bild 3.1" width='100%' height="30"></img>
+            <img src={bild3_2} alt="Bild 3.2" width='100%' height="30"></img>
+            <img src={bild3_3} alt="Bild 3.3" width='100%' height="30"></img>
         </div>
         {/* <!-- Zeile 4 --> */}
         <div class="image-container">
-            <img src="bild4.jpg" width="640" height="345" alt="" border="0"></img>
+            <img src={bild4} width="640" height="345" alt="" border="0"></img>
         </div>
         {/* <!-- Zeile 5 --> */}
         <div class="image-container">
-            <img src="bild5.jpg" alt="Bild 5" width="640" height='100%'></img>
+            <img src={bild5} alt="Bild 5" width="640" height='100%'></img>
         </div>
         <div>
         <p color='FFFFFF'>
@@ -243,27 +253,27 @@ function AuctionInfo() {
                 </div>
         {/* <!-- Zeile 1 --> */}
          <div className="image-container">
-            <img src="./bild1.jpg" alt="Bild 1" width="640" height="32"></img>
+            <img src={bild1} alt="Bild 1" width="640" height="32"></img>
          </div>
          {/* <!-- Zeile 2 --> */}
         <div className="image-container">
-            <img src="bild2_1.jpg" alt="Bild 2.1" width='100%' height="100"></img>
-            <img src="bild2_2.jpg" alt="Bild 2.2" width="150" height="100"></img>
-            <img src="bild2_3.jpg" alt="Bild 2.3" width='100%' height="100"></img>
+            <img src={bild2_1} alt="Bild 2.1" width='100%' height="100"></img>
+            <img src={bild2_2} alt="Bild 2.2" width="150" height="100"></img>
+            <img src={bild2_3} alt="Bild 2.3" width='100%' height="100"></img>
         </div>
         {/* <!-- Zeile 3 --> */}
         <div className="image-container">
-            <img src="bild3_1.jpg" alt="Bild 3.1" width='100%' height="30"></img>
-            <img src="bild3_2.jpg" alt="Bild 3.2" width='100%' height="30"></img>
-            <img src="bild3_3.jpg" alt="Bild 3.3" width='100%' height="30"></img>
+            <img src={bild3_1} alt="Bild 3.1" width='100%' height="30"></img>
+            <img src={bild3_2} alt="Bild 3.2" width='100%' height="30"></img>
+            <img src={bild3_3} alt="Bild 3.3" width='100%' height="30"></img>
         </div>
         {/* <!-- Zeile 4 --> */}
         <div class="image-container">
-            <img src="bild4.jpg" width="640" height="345" alt="" border="0"></img>
+            <img src={bild4} width="640" height="345" alt="" border="0"></img>
         </div>
         {/* <!-- Zeile 5 --> */}
         <div class="image-container">
-            <img src="bild5.jpg" alt="Bild 5" width="640" height='100%'></img>
+            <img src={bild5} alt="Bild 5" width="640" height='100%'></img>
         </div>
         <div>
         <p color='FFFFFF'>
