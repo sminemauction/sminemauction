@@ -73,7 +73,7 @@ function AuctionInfo() {
 
         for(let i=0; i<logs.length; i++) {
             const bidder = {address: '', bid: 0};
-            bidder.bid = (parseInt(logs[i].args.value)/10**18 / 10**9) // / 10**9 to display in Billion
+            bidder.bid = (parseInt(logs[i].args.value)/10**18 / 10**6) // / 10**9 to display in Billion
             // bidder.bid = (parseInt(logs[i].args.value)/10**24) //
             const address = logs[i].args.from
             bidder.address = '0x.....' + address.substring(address.length - 5)
@@ -175,7 +175,7 @@ function AuctionInfo() {
                 </p>
                 <div className='leaderboard'>
                     <p className='leaderItem'>1st - {currentFirst.address}</p>
-                    <p>Bid - {parseFloat(currentFirst.bid).toFixed(2)}B $OGSM </p>
+                    <p>Bid - {parseFloat(currentFirst.bid).toFixed(2)}M $OGSM </p>
                 </div>
                 <div className='leaderboard'>
                     <p className='leaderItem'>2nd - {currentSecond.address}</p>
