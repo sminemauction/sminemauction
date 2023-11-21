@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import {  parseAbiItem, decodeEventLog, decodeFunctionData, transactionType } from 'viem';
 import { createPublicClient, http } from 'viem';
 import { mainnet } from 'wagmi';
-import './auctionInfo.css'
+import './auctionInfo.css' 
 import bild1 from './a.jpg'
 import hosanna from './assets/hosanna.mp3';
 
