@@ -73,7 +73,7 @@ function AuctionInfo() {
 
         for(let i=0; i<logs.length; i++) {
             const bidder = {address: '', bid: 0};
-            bidder.bid = (parseInt(logs[i].args.value)/10**18 / 10**6) // / 10**9 to display in Billion
+            bidder.bid = (parseInt(logs[i].args.value)/10**18 / 10**9) // / 10**9 to display in Billion
             // bidder.bid = (parseInt(logs[i].args.value)/10**24) //
             const address = logs[i].args.from
             bidder.address = '0x.....' + address.substring(address.length - 5)
@@ -169,21 +169,25 @@ function AuctionInfo() {
         <>
         {previousFirst ? 
             <div>
+                <div className='button'>
                 <p className='button'>
                     <button onClick={start}>Hosanna</button>
                     <button onClick={pause}>Nosanna</button>
                 </p>
+                </div>
+                <div className='leaderboard'>
                 <div className='leaderboard'>
                     <p className='leaderItem'>1st - {currentFirst.address}</p>
-                    <p>Bid - {parseFloat(currentFirst.bid).toFixed(2)}M $OGSM </p>
+                    <p>Bid - {parseFloat(currentFirst.bid).toFixed(2)}B $OGSM </p>
                 </div>
                 <div className='leaderboard'>
                     <p className='leaderItem'>2nd - {currentSecond.address}</p>
-                    <p>Bid - {parseFloat(currentSecond.bid).toFixed(2)}M $OGSM</p>
+                    <p>Bid - {parseFloat(currentSecond.bid).toFixed(2)}B $OGSM</p>
                 </div>
                 <div className='leaderboard'>
                     <p className='leaderItem'>3rd - {currentThird.address}</p>
-                    <p>Bid - {parseFloat(currentThird.bid).toFixed(2)}M $OGSM</p>
+                    <p>Bid - {parseFloat(currentThird.bid).toFixed(2)}B $OGSM</p>
+                </div>
                 </div>
                 {/* <!-- Zeile 1 --> */}
                 <div className="image-container">
