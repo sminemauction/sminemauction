@@ -168,94 +168,93 @@ function AuctionInfo() {
         {previousFirst ? 
             <div>
                 <p className='button'>
-        <button onClick={start}>Hosanna</button>
-        <button onClick={pause}>Nosanna</button>
+                    <button onClick={start}>Hosanna</button>
+                    <button onClick={pause}>Nosanna</button>
                 </p>
                 <div className='leaderboard'>
-                <p className='leaderItem'>1st - {currentFirst.address}</p>
-                <p>Bid - {currentFirst.bid} </p>
+                    <p className='leaderItem'>1st - {currentFirst.address}</p>
+                    <p>Bid - {currentFirst.bid} </p>
                 </div>
                 <div className='leaderboard'>
-                <p className='leaderItem'>2nd - {currentSecond.address}</p>
-                <p>Bid - {currentSecond.bid} </p>
+                    <p className='leaderItem'>2nd - {currentSecond.address}</p>
+                    <p>Bid - {currentSecond.bid} </p>
                 </div>
                 <div className='leaderboard'>
-                <p className='leaderItem'>3rd - {currentThird.address}</p>
-                <p>Bid - {currentThird.bid} </p>
+                    <p className='leaderItem'>3rd - {currentThird.address}</p>
+                    <p>Bid - {currentThird.bid} </p>
                 </div>
-        {/* <!-- Zeile 1 --> */}
-        <div className="image-container">
-            <img src={bild1} alt="Bild 1" width="640" height="32"></img>
-         </div>
-         {/* <!-- Zeile 2 --> */}
-        <div className="image-container">
-            <img src={bild2_1} alt="Bild 2.1" width='100%' height="100"></img>
-            <img src={bild2_2} alt="Bild 2.2" width="150" height="100"></img>
-            <img src={bild2_3} alt="Bild 2.3" width='100%' height="100"></img>
-        </div>
-        {/* <!-- Zeile 3 --> */}
-        <div className="image-container">
-            <img src={bild3_1} alt="Bild 3.1" width='100%' height="30"></img>
-            <img src={bild3_2} alt="Bild 3.2" width='100%' height="30"></img>
-            <img src={bild3_3} alt="Bild 3.3" width='100%' height="30"></img>
-        </div>
-        {/* <!-- Zeile 4 --> */}
-        <div class="image-container">
-            <img src={bild4} width="640" height="345" alt="" border="0"></img>
-        </div>
-        {/* <!-- Zeile 5 --> */}
-        <div class="image-container">
-            <img src={bild5} alt="Bild 5" width="640" height='100%'></img>
-        </div>
-    
-  
+                {/* <!-- Zeile 1 --> */}
+                <div className="image-container">
+                    <img src={bild1} alt="Bild 1" width="640" height="32"></img>
+                 </div>
+                 {/* <!-- Zeile 2 --> */}
+                <div className="image-container">
+                    <img src={bild2_1} alt="Bild 2.1" width='100%' height="100"></img>
+                    <img src={bild2_2} alt="Bild 2.2" width="150" height="100"></img>
+                    <img src={bild2_3} alt="Bild 2.3" width='100%' height="100"></img>
+                </div>
+                {/* <!-- Zeile 3 --> */}
+                <div className="image-container">
+                    <img src={bild3_1} alt="Bild 3.1" width='100%' height="30"></img>
+                    <img src={bild3_2} alt="Bild 3.2" width='100%' height="30"></img>
+                    <img src={bild3_3} alt="Bild 3.3" width='100%' height="30"></img>
+                </div>
+                {/* <!-- Zeile 4 --> */}
+                <div class="image-container">
+                    <img src={bild4} width="640" height="345" alt="" border="0"></img>
+                </div>
+                {/* <!-- Zeile 5 --> */}
+                <div class="image-container">
+                    <img src={bild5} alt="Bild 5" width="640" height='100%'></img>
+                </div>
             </div>
         : 
             <div>
-                      <div>
-                <p className='button'>
-        <button onClick={start}>Hosanna</button>
-        <button onClick={pause}>Nosanna</button>
-                </p>
-                <div className='leaderboard'>
-                <p className='leaderItem'>1st - Address</p>
-                <p>Bid - Bid </p>
+                <div>
+                    <p className='button'>
+                        <button onClick={start}>Hosanna</button>
+                        <button onClick={pause}>Nosanna</button>
+                    </p>
+                    <div className='leaderboard'>
+                        <p className='leaderItem'>1st - Address</p>
+                        <p>Bid - Bid </p>
+                    </div>
+                    <div className='leaderboard'>
+                        <p className='leaderItem'>2nd - Address</p>
+                        <p>Bid - Bid </p>
+                    </div>
+                    <div className='leaderboard'>
+                        <p className='leaderItemLast'>3rd - Address</p>
+                        <p>Bid - Bid </p>
+                    </div>
+                    {/* <!-- Zeile 1 --> */}
+                     <div className="image-container">
+                        <img src={bild1} alt="Bild 1" width="640" height="32"></img>
+                     </div>
+                     {/* <!-- Zeile 2 --> */}
+                    <div className="image-container">
+                        <img src={bild2_1} alt="Bild 2.1" width='100%' height="100"></img>
+                        <img src={bild2_2} alt="Bild 2.2" width="150" height="100"></img>
+                        <img src={bild2_3} alt="Bild 2.3" width='100%' height="100"></img>
+                    </div>
+                    {/* <!-- Zeile 3 --> */}
+                    <div className="image-container">
+                        <img src={bild3_1} alt="Bild 3.1" width='100%' height="30"></img>
+                        <img src={bild3_2} alt="Bild 3.2" width='100%' height="30"></img>
+                        <img src={bild3_3} alt="Bild 3.3" width='100%' height="30"></img>
+                    </div>
+                    {/* <!-- Zeile 4 --> */}
+                    <div class="image-container">
+                        <img src={bild4} width="640" height="345" alt="" border="0"></img>
+                    </div>
+                    {/* <!-- Zeile 5 --> */}
+                    <div class="image-container">
+                        <img src={bild5} alt="Bild 5" width="640" height='100%'></img>
+                    </div>
                 </div>
-                <div className='leaderboard'>
-                <p className='leaderItem'>2nd - Address</p>
-                <p>Bid - Bid </p>
-                </div>
-                <div className='leaderboard'>
-                <p className='leaderItemLast'>3rd - Address</p>
-                <p>Bid - Bid </p>
-                </div>
-        {/* <!-- Zeile 1 --> */}
-         <div className="image-container">
-            <img src={bild1} alt="Bild 1" width="640" height="32"></img>
-         </div>
-         {/* <!-- Zeile 2 --> */}
-        <div className="image-container">
-            <img src={bild2_1} alt="Bild 2.1" width='100%' height="100"></img>
-            <img src={bild2_2} alt="Bild 2.2" width="150" height="100"></img>
-            <img src={bild2_3} alt="Bild 2.3" width='100%' height="100"></img>
-        </div>
-        {/* <!-- Zeile 3 --> */}
-        <div className="image-container">
-            <img src={bild3_1} alt="Bild 3.1" width='100%' height="30"></img>
-            <img src={bild3_2} alt="Bild 3.2" width='100%' height="30"></img>
-            <img src={bild3_3} alt="Bild 3.3" width='100%' height="30"></img>
-        </div>
-        {/* <!-- Zeile 4 --> */}
-        <div class="image-container">
-            <img src={bild4} width="640" height="345" alt="" border="0"></img>
-        </div>
-        {/* <!-- Zeile 5 --> */}
-        <div class="image-container">
-            <img src={bild5} alt="Bild 5" width="640" height='100%'></img>
-        </div>
+            </div>
         }
         </>
-
     )
 }
 
