@@ -3,15 +3,7 @@ import {  parseAbiItem, decodeEventLog, decodeFunctionData, transactionType } fr
 import { createPublicClient, http } from 'viem';
 import { mainnet } from 'wagmi';
 import './auctionInfo.css'
-import bild1 from './assets/bild1.jpg'
-import bild2_1 from './assets/bild2_1.jpg';
-import bild2_2 from './assets/bild2_2.jpg';
-import bild2_3 from './assets/bild2_3.jpg';
-import bild3_1 from './assets/bild3_1.jpg';
-import bild3_2 from './assets/bild3_2.jpg';
-import bild3_3 from './assets/bild3_3.jpg';
-import bild4 from './assets/bild4.jpg';
-import bild5 from './assets/bild5.jpg';
+import bild1 from './a.jpg'
 import hosanna from './assets/hosanna.mp3';
 
 
@@ -189,30 +181,42 @@ function AuctionInfo() {
                     <p>Bid - {parseFloat(currentThird.bid).toFixed(2)}B $OGSM</p>
                 </div>
                 </div>
-                {/* <!-- Zeile 1 --> */}
-                <div className="image-container">
-                    <img src={bild1} alt="Bild 1" width="640" height="32"></img>
-                </div>
-                {/* <!-- Zeile 2 --> */}
-                <div className="image-container">
-                    <img src={bild2_1} alt="Bild 2.1" width='100%' height="100"></img>
-                    <img src={bild2_2} alt="Bild 2.2" width="150" height="100"></img>
-                    <img src={bild2_3} alt="Bild 2.3" width='100%' height="100"></img>
-                </div>
-                {/* <!-- Zeile 3 --> */}
-                <div className="image-container">
-                    <img src={bild3_1} alt="Bild 3.1" width='100%' height="30"></img>
-                    <img src={bild3_2} alt="Bild 3.2" width='100%' height="30"></img>
-                    <img src={bild3_3} alt="Bild 3.3" width='100%' height="30"></img>
-                </div>
-                {/* <!-- Zeile 4 --> */}
-                <div class="image-container">
-                    <img src={bild4} width="640" height="345" alt="" border="0"></img>
-                </div>
-                {/* <!-- Zeile 5 --> */}
-                <div class="image-container">
-                    <img src={bild5} alt="Bild 5" width="640" height='100%'></img>
-                </div>
+               <!-- Zeile 1 -->
+	<div class="image-container">
+    <img src="A.jpg" alt="Bild 1" width="1280" height="1209">
+	</div>
+
+  
+
+
+
+	
+<div>
+<font color=FFFFFF"
+<br>
+<br>
+Good morning and welcome to <br> <br>
+
+Sminemboy's <br>
+Quantumimmortal Surrealty<br> <br>
+
+ze Auction House of ze Sminem. <br> <br> <br>
+
+
+Here you bid on ze Lord's Reliquia and godly hand-crafted artworks by bringing your $OGSM to the sacrifice. <br>
+Sminem creates art for you. You bid by burning $OGSM. <br> <br>
+
+Zis is the next iteration of max-bidding-technology. <br> <br> 
+
+Rules are simple: <br>
+Highest bidder in given timeframe wins the auctioned item. <br>
+Second and third place get a consolation prize: <a href="https://opensea.io/collection/sminems">SMINEMS NFT</a>
+<br> <br>
+
+Pro tip: You can buy $OGSM (CA: 0x9778ac3d5a2f916aa9abf1eb85c207d990ca2655) on f.e. 1inch.io <br>
+and add send to 0x000000000000000000000000000000000000dEaD in order to save on gas. <br>
+</font>
+               
             </div>
         : 
             <div>
@@ -233,30 +237,41 @@ function AuctionInfo() {
                         <p className='leaderItemLast'>3rd - Address</p>
                         <p>Bid - Bid </p>
                     </div>
-                    {/* <!-- Zeile 1 --> */}
-                    <div className="image-container">
-                        <img src={bild1} alt="Bild 1" width="640" height="32"></img>
-                    </div>
-                    {/* <!-- Zeile 2 --> */}
-                    <div className="image-container">
-                        <img src={bild2_1} alt="Bild 2.1" width='100%' height="100"></img>
-                        <img src={bild2_2} alt="Bild 2.2" width="150" height="100"></img>
-                        <img src={bild2_3} alt="Bild 2.3" width='100%' height="100"></img>
-                    </div>
-                    {/* <!-- Zeile 3 --> */}
-                    <div className="image-container">
-                        <img src={bild3_1} alt="Bild 3.1" width='100%' height="30"></img>
-                        <img src={bild3_2} alt="Bild 3.2" width='100%' height="30"></img>
-                        <img src={bild3_3} alt="Bild 3.3" width='100%' height="30"></img>
-                    </div>
-                    {/* <!-- Zeile 4 --> */}
-                    <div class="image-container">
-                        <img src={bild4} width="640" height="345" alt="" border="0"></img>
-                    </div>
-                    {/* <!-- Zeile 5 --> */}
-                    <div class="image-container">
-                        <img src={bild5} alt="Bild 5" width="640" height='100%'></img>
-                    </div>
+                    <!-- Zeile 1 -->
+	<div class="image-container">
+    <img src="A.jpg" alt="Bild 1" width="1280" height="1209">
+	</div>
+
+  
+
+
+
+	
+<div>
+<font color=FFFFFF"
+<br>
+<br>
+Good morning and welcome to <br> <br>
+
+Sminemboy's <br>
+Quantumimmortal Surrealty<br> <br>
+
+ze Auction House of ze Sminem. <br> <br> <br>
+
+
+Here you bid on ze Lord's Reliquia and godly hand-crafted artworks by bringing your $OGSM to the sacrifice. <br>
+Sminem creates art for you. You bid by burning $OGSM. <br> <br>
+
+Zis is the next iteration of max-bidding-technology. <br> <br> 
+
+Rules are simple: <br>
+Highest bidder in given timeframe wins the auctioned item. <br>
+Second and third place get a consolation prize: <a href="https://opensea.io/collection/sminems">SMINEMS NFT</a>
+<br> <br>
+
+Pro tip: You can buy $OGSM (CA: 0x9778ac3d5a2f916aa9abf1eb85c207d990ca2655) on f.e. 1inch.io <br>
+and add send to 0x000000000000000000000000000000000000dEaD in order to save on gas. <br>
+</font>
                 </div>
             </div>
         }
