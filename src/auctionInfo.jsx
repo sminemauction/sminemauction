@@ -179,11 +179,11 @@ function AuctionInfo() {
                 </div>
                 <div className='leaderboard'>
                     <p className='leaderItem'>2nd - {currentSecond.address}</p>
-                    <p>Bid - {parseFloat(currentSecond.bid).toFixed(2)}B $OGSM</p>
+                    <p>Bid - {parseFloat(currentSecond.bid).toFixed(2)}M $OGSM</p>
                 </div>
                 <div className='leaderboard'>
                     <p className='leaderItem'>3rd - {currentThird.address}</p>
-                    <p>Bid - {parseFloat(currentThird.bid).toFixed(2)}B $OGSM</p>
+                    <p>Bid - {parseFloat(currentThird.bid).toFixed(2)}M $OGSM</p>
                 </div>
                 {/* <!-- Zeile 1 --> */}
                 <div className="image-container">
