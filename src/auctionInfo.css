@@ -1,3 +1,23 @@
 .previousAuction {
     color: white;
 }
+
+.button {
+    float:left;
+    margin-left:0%;
+    margin-top: 2%;
+}
+
+.leaderboard {
+    float: left;
+    margin-left: 5%;
+}
+
+.leaderItem {
+    margin-bottom: -7%;
+}
+
+.leaderItemLast {
+    margin-bottom: -7%;
+    margin-right: 0.5%;
+}
