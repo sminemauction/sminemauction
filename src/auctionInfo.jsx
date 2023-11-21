@@ -69,10 +69,12 @@ function AuctionInfo() {
             fromBlock: previousPeriodStart.toString(),
             toBlock: 'latest',
         })
+        console.log(logs)
 
         for(let i=0; i<logs.length; i++) {
             const bidder = {address: '', bid: 0};
-            bidder.bid = parseInt(parseInt(logs[i].args.value)/10**18);
+            bidder.bid = (parseInt(logs[i].args.value)/10**18 / 10**9) // / 10**9 to display in Billion
+            // bidder.bid = (parseInt(logs[i].args.value)/10**24) //
             const address = logs[i].args.from
             bidder.address = '0x.....' + address.substring(address.length - 5)
 
@@ -135,9 +137,9 @@ function AuctionInfo() {
                 }
             }
         }
-        console.log(previousFirst);
-        console.log(previousSecond);
-        console.log(previousThird);
+        // console.log(previousFirst);
+        // console.log(previousSecond);
+        // console.log(previousThird);
 
         console.log(currentFirst);
         console.log(currentSecond);
@@ -173,21 +175,21 @@ function AuctionInfo() {
                 </p>
                 <div className='leaderboard'>
                     <p className='leaderItem'>1st - {currentFirst.address}</p>
-                    <p>Bid - {currentFirst.bid} </p>
+                    <p>Bid - {parseFloat(currentFirst.bid).toFixed(2)}B $OGSM </p>
                 </div>
                 <div className='leaderboard'>
                     <p className='leaderItem'>2nd - {currentSecond.address}</p>
-                    <p>Bid - {currentSecond.bid} </p>
+                    <p>Bid - {parseFloat(currentSecond.bid).toFixed(2)}B $OGSM</p>
                 </div>
                 <div className='leaderboard'>
                     <p className='leaderItem'>3rd - {currentThird.address}</p>
-                    <p>Bid - {currentThird.bid} </p>
+                    <p>Bid - {parseFloat(currentThird.bid).toFixed(2)}B $OGSM</p>
                 </div>
                 {/* <!-- Zeile 1 --> */}
                 <div className="image-container">
                     <img src={bild1} alt="Bild 1" width="640" height="32"></img>
-                 </div>
-                 {/* <!-- Zeile 2 --> */}
+                </div>
+                {/* <!-- Zeile 2 --> */}
                 <div className="image-container">
                     <img src={bild2_1} alt="Bild 2.1" width='100%' height="100"></img>
                     <img src={bild2_2} alt="Bild 2.2" width="150" height="100"></img>
@@ -228,10 +230,10 @@ function AuctionInfo() {
                         <p>Bid - Bid </p>
                     </div>
                     {/* <!-- Zeile 1 --> */}
-                     <div className="image-container">
+                    <div className="image-container">
                         <img src={bild1} alt="Bild 1" width="640" height="32"></img>
-                     </div>
-                     {/* <!-- Zeile 2 --> */}
+                    </div>
+                    {/* <!-- Zeile 2 --> */}
                     <div className="image-container">
                         <img src={bild2_1} alt="Bild 2.1" width='100%' height="100"></img>
                         <img src={bild2_2} alt="Bild 2.2" width="150" height="100"></img>
@@ -255,6 +257,7 @@ function AuctionInfo() {
             </div>
         }
         </>
+
     )
 }
 
