@@ -11,7 +11,7 @@
 .leaderboard {
     color: white;
     float: left;
-    margin-left: 5%;
+    margin-left: 2%;
 }
 
 .leaderItem {
@@ -22,5 +22,13 @@
 .leaderItemLast {
     color: white;
     margin-bottom: -7%;
-    margin-right: 50%;
+
+    float: left;
 }
+
+/* .image {
+    display: block;
+    float:left;
+    margin-left:0%;
+    margin-right: auto;
+} */
