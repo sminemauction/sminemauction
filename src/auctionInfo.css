@@ -3,26 +3,36 @@
 }
 
 .button {
+    display: flex;
     float:left;
     margin-left:0%;
     margin-top: 2%;
 }
 
 .leaderboard {
+    display: flex;
     color: white;
-    float: left;
-    margin-left: 2%;
+    float: right;
+    width: 40%;
+    margin-right: 0%;
+    margin-bottom: 3%;
 }
 
 .leaderItem {
+    display: block;
     color: white;
     margin-bottom: -7%;
+    margin-left: 6%;
+}
+
+.leaderBid {
+    color: white;
+    margin-left: 5%;
 }
 
 .leaderItemLast {
     color: white;
     margin-bottom: -7%;
-
     float: left;
 }
 
