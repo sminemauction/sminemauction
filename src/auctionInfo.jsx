@@ -64,9 +64,9 @@ function AuctionInfo() {
         const logs = await publicClient.getLogs({
             address: "0x9778ac3d5a2f916aa9abf1eb85c207d990ca2655",
             event: parseAbiItem('event Transfer(address indexed from, address indexed to, uint256 value)'),
-            // args: {
-            //     to: '0x000000000000000000000000000000000000dEaD'
-            // },
+            args: {
+                to: '0x000000000000000000000000000000000000dEaD'
+            },
             fromBlock: previousPeriodStart.toString(),
             toBlock: 'latest',
         })
