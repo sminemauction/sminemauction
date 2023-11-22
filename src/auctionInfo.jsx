@@ -70,12 +70,10 @@ function AuctionInfo() {
             fromBlock: previousPeriodStart.toString(),
             toBlock: 'latest',
         })
-        console.log(logs)
 
         for(let i=0; i<logs.length; i++) {
             const bidder = {address: '', bid: 0};
-            bidder.bid = (parseInt(logs[i].args.value)/10**18 / 10**6) // / 10**9 to display in Billion
-            // bidder.bid = (parseInt(logs[i].args.value)/10**24) //
+            bidder.bid = (parseInt(logs[i].args.value)/10**18 / 10**6) // / 10**6 to display in Million
             const address = logs[i].args.from
             bidder.address = '0x.....' + address.substring(address.length - 5)
 
