@@ -74,7 +74,7 @@ function AuctionInfo() {
 
         for(let i=0; i<logs.length; i++) {
             const bidder = {address: '', bid: 0};
-            bidder.bid = (parseInt(logs[i].args.value)/10**18 / 10**9) // / 10**9 to display in Billion
+            bidder.bid = (parseInt(logs[i].args.value)/10**18 / 10**6) // / 10**9 to display in Billion
             // bidder.bid = (parseInt(logs[i].args.value)/10**24) //
             const address = logs[i].args.from
             bidder.address = '0x.....' + address.substring(address.length - 5)
@@ -177,18 +177,18 @@ function AuctionInfo() {
                 </p>
                 </div>
                 <div className='leaderboard'>
-                <div className='leaderItem'>
-                    <p className='leaderItem'>1st - {currentFirst.address}</p>
-                    <p className='leaderBid'>Bid - {parseFloat(currentFirst.bid).toFixed(2)}B</p>
-                </div>
-                <div className='leaderItem'>
-                    <p className='leaderItem'>2nd - {currentSecond.address}</p>
-                    <p className='leaderBid'>Bid - {parseFloat(currentSecond.bid).toFixed(2)}B</p>
-                </div>
-                <div className='leaderItem'>
-                    <p className='leaderItem'>3rd - {currentThird.address}</p>
-                    <p className='leaderBid'>Bid - {parseFloat(currentThird.bid).toFixed(2)}B</p>
-                </div>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>1st - {currentFirst.address}</p>
+                        <p className='leaderBid'>Bid - {parseFloat(currentFirst.bid).toFixed(2)}M</p>
+                    </div>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>2nd - {currentSecond.address}</p>
+                        <p className='leaderBid'>Bid - {parseFloat(currentSecond.bid).toFixed(2)}M</p>
+                    </div>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>3rd - {currentThird.address}</p>
+                        <p className='leaderBid'>Bid - {parseFloat(currentThird.bid).toFixed(2)}M</p>
+                    </div>
                 </div>
                 {/* <!-- Zeile 1 --> */}
                 <div className="image-container">
@@ -232,31 +232,30 @@ function AuctionInfo() {
             </div>
         : 
             <div>
-                <div className='leaderboard'>
+                <div className='button'>
                     <p className='button'>
                         <button onClick={start}>Hosanna</button>
                         <button onClick={pause}>Nosanna</button>
                     </p>
-                    <div>
-                    <div className='leaderboard'>
-                        <p className='leaderItem'>1st - Address</p>
-                        <p className='leaderBid'>Bid - Bid </p>
+                </div>
+                <div className='leaderBoard'>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>1st - Loading....</p>
+                        <p className='leaderBid'>Bid - Loading.... </p>
                     </div>
-                    <div className='leaderboard'>
-                        <p className='leaderItem'>2nd - Address</p>
-                        <p className='leaderBid'>Bid - Bid </p>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>2nd - Loading....</p>
+                        <p className='leaderBid'>Bid - Loading.... </p>
                     </div>
-                    <div className='leaderboard'>
-                        <p className='leaderItem'>3rd - Address</p>
-                        <p className='leaderBid'>Bid - Bid </p>
-                    </div>
-                    </div>
-                    {/* <!-- Zeile 1 --> */}
-                    <div className="image-container">
-                        <img src={image} alt="Bild 1" width="1280" height="1209"></img>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>3rd - Loading....</p>
+                        <p className='leaderBid'>Bid - Loading.... </p>
                     </div>
                 </div>
-                <div>
+                    {/* <!-- Zeile 1 --> */}
+                <div className="image-container">
+                    <img src={image} alt="Bild 1" width="1280" height="1209"></img>
+                </div>
                     <font color="FFFFFF">
                         <br></br>
                         <br></br>
@@ -292,7 +291,6 @@ function AuctionInfo() {
                         and add send to 0x000000000000000000000000000000000000dEaD in order to save on gas.
                         <br></br>
                     </font>
-                </div>
             </div>
         }
         </>
