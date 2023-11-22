@@ -13,7 +13,7 @@
     display: flex;
     color: white;
     float: right;
-    width: 40%;
+    width: 50%;
     margin-right: 0%;
     margin-bottom: 3%;
 }
@@ -23,11 +23,13 @@
     color: white;
     margin-bottom: -7%;
     margin-left: 6%;
+    width: 100%;
 }
 
 .leaderBid {
     color: white;
     margin-left: 5%;
+    width: 100%;
 }
 
 .leaderItemLast {
