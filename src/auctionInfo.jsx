@@ -40,7 +40,7 @@ function AuctionInfo() {
     useEffect(() => {
         async function getInfo() {
 
-        const startBlock = 18564887;
+        const startBlock = 18625146;
         const blocksPerPeriod = 21600 //per 72h
 
         const currentBlock = await publicClient.getBlockNumber()
