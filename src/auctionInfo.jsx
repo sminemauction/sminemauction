@@ -3,15 +3,6 @@ import {  parseAbiItem, decodeEventLog, decodeFunctionData, transactionType } fr
 import { createPublicClient, http } from 'viem';
 import { mainnet } from 'wagmi';
 import './auctionInfo.css'
-import bild1 from './assets/bild1.jpg'
-import bild2_1 from './assets/bild2_1.jpg';
-import bild2_2 from './assets/bild2_2.jpg';
-import bild2_3 from './assets/bild2_3.jpg';
-import bild3_1 from './assets/bild3_1.jpg';
-import bild3_2 from './assets/bild3_2.jpg';
-import bild3_3 from './assets/bild3_3.jpg';
-import bild4 from './assets/bild4.jpg';
-import bild5 from './assets/bild5.jpg';
 import hosanna from './assets/hosanna.mp3';
 import image from './assets/A.jpg';
 
@@ -40,7 +31,9 @@ function AuctionInfo() {
     useEffect(() => {
         async function getInfo() {
 
-        const startBlock = 18625146;
+///////// Input the correct start block for the first auctino here //////
+        const startBlock = 18564887;
+    ////////////////////////////////////////////////////////////////
         const blocksPerPeriod = 21600 //per 72h
 
         const currentBlock = await publicClient.getBlockNumber()
@@ -70,10 +63,12 @@ function AuctionInfo() {
             fromBlock: previousPeriodStart.toString(),
             toBlock: 'latest',
         })
+        console.log(logs)
 
         for(let i=0; i<logs.length; i++) {
             const bidder = {address: '', bid: 0};
-            bidder.bid = (parseInt(logs[i].args.value)/10**18 / 10**6) // / 10**6 to display in Million
+            bidder.bid = (parseInt(logs[i].args.value)/10**18 / 10**6) // / 10**9 to display in Billion
+            // bidder.bid = (parseInt(logs[i].args.value)/10**24) //
             const address = logs[i].args.from
             bidder.address = '0x.....' + address.substring(address.length - 5)
 
@@ -227,6 +222,23 @@ function AuctionInfo() {
                         and add send to 0x000000000000000000000000000000000000dEaD in order to save on gas.
                         <br></br>
                     </font>
+                    <div className='previousAuction'>
+                    <p className='previousAuction'>Previous Auction: </p>
+                    </div>
+                    <div className='previousLeaderboard'>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>1st - {previousFirst.address}</p>
+                        <p className='leaderBid'>Bid - {parseFloat(previousFirst.bid).toFixed(2)}M</p>
+                    </div>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>2nd - {previousSecond.address}</p>
+                        <p className='leaderBid'>Bid - {parseFloat(previousSecond.bid).toFixed(2)}M</p>
+                    </div>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>3rd - {previousThird.address}</p>
+                        <p className='leaderBid'>Bid - {parseFloat(previousThird.bid).toFixed(2)}M</p>
+                    </div>
+                </div>
             </div>
         : 
             <div>
@@ -289,6 +301,21 @@ function AuctionInfo() {
                         and add send to 0x000000000000000000000000000000000000dEaD in order to save on gas.
                         <br></br>
                     </font>
+                    <font color="FFFFFF">Previous Auction: </font>
+                    <div className='leaderBoard'>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>1st - Loading....</p>
+                        <p className='leaderBid'>Bid - Loading.... </p>
+                    </div>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>2nd - Loading....</p>
+                        <p className='leaderBid'>Bid - Loading.... </p>
+                    </div>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>3rd - Loading....</p>
+                        <p className='leaderBid'>Bid - Loading.... </p>
+                    </div>
+                </div>
             </div>
         }
         </>
