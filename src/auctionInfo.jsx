@@ -32,7 +32,7 @@ function AuctionInfo() {
         async function getInfo() {
 
 ///////// Input the correct start block for the first auctino here //////
-        const startBlock = 18651808;
+        const startBlock = 18651850;
     ////////////////////////////////////////////////////////////////
         const blocksPerPeriod = 21600 //per 72h
 
