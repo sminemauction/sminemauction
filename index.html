@@ -13,24 +13,35 @@
       min-height: 100vh;
       flex-direction: column;
       overflow-x: hidden; /* Prevent horizontal scrolling */
-      background-color: #272526;
+      background: url('./src/assets/auctionRoom.png') center/cover no-repeat; /* Set background image */
       color: #fff;
       font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    }
-
-    img {
-      display: block;
-      margin: 0;
-      width: 100%;
+      position: relative; /* Required for positioning children elements */
     }
 
     .image-container {
       max-width: 100%; /* Set maximum width to 100% to avoid overflow */
       margin: 0 auto; /* Center the container */
+      width: 100%;
+      box-sizing: border-box; /* Include padding and border in the element's total width and height */
+      position: relative; /* Required for positioning children elements */
     }
 
-    #root {
-      /* Add any styles for your root element if needed */
+    #text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5); /* Opaque black background */
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 80%;
+    }
+
+    #text-overlay p {
+      margin: 0;
+      font-size: 1.5em;
     }
 
     #timer {
@@ -41,14 +52,16 @@
 </head>
 <body>
   <div class="image-container">
-    <img src="./src/assets/auctionRoom.png" alt="Auction Room Image">
+    <div id="text-overlay">
+      <p>Your Centered Text Here</p>
+    </div>
+    <div id="timer"></div>
   </div>
-  <div id="timer"></div>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
   <script>
     // Set the specific end time to November 29, 2023, at 2 AM UTC
-    const endTime = new Date(Date.UTC(2023, 10, 29, 1, 0, 0)); // Months are zero-based
+    const endTime = new Date(Date.UTC(2023, 10, 29, 2, 0, 0)); // Months are zero-based
 
     // Update the timer every second
     const timerElement = document.getElementById('timer');
@@ -64,7 +77,7 @@
         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-        timerElement.textContent = `Auction ends in: ${hours}h ${minutes}m ${seconds}s`;
+        timerElement.textContent = `Time until auction ends: ${hours}h ${minutes}m ${seconds}s`;
       }
     }
 
