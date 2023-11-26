@@ -318,6 +318,5 @@ function AuctionInfo() {
                 </div>
             </div>
         </>
-    )
 
 export default AuctionInfo
