@@ -1,78 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="./src/assets/auctionRoom.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sminem Auction</title>
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-      place-items: center;
-      min-height: 100vh;
-      flex-direction: column;
-      overflow-x: hidden; /* Prevent horizontal scrolling */
-      background-color: #272526;
-      color: #fff;
-      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./src/assets/auctionRoom.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sminem Auction</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            place-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            overflow-x: hidden;
+            /* Prevent horizontal scrolling */
+            background-color: #272526;
+            color: #fff;
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        }
 
-    img {
-      display: block;
-      margin: 0;
-      width: 100%;
-    }
+        img {
+            display: block;
+            margin: 0;
+            width: 100%;
+        }
 
-    .image-container {
-      max-width: 100%; /* Set maximum width to 100% to avoid overflow */
-      margin: 0 auto; /* Center the container */
-    }
+        .image-container {
+            max-width: 100%;
+            /* Set maximum width to 100% to avoid overflow */
+            margin: 0 auto;
+            /* Center the container */
+            text-align: center; /* Center the text within the container */
+        }
 
-    #root {
-      /* Add any styles for your root element if needed */
-    }
+        #root {
+            /* Add any styles for your root element if needed */
+        }
 
-    #timer {
-      font-size: 1.5em;
-      margin-top: 20px;
-    }
-  </style>
+        #timer {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="image-container">
-    <img src="./src/assets/auctionRoom.png" alt="Auction Room Image">
-  </div>
-  <div id="timer"></div>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-  <script>
-    // Set the specific end time to November 29, 2023, at 2 AM UTC
-    const endTime = new Date(Date.UTC(2023, 10, 29, 1, 0, 0)); // Months are zero-based
+    <div class="image-container">
+        Good morning and welcome to
 
-    // Update the timer every second
-    const timerElement = document.getElementById('timer');
+        <strong>Sminemboy's Quantumimmortal Surrealty</strong>
 
-    function updateTimer() {
-      const currentTime = new Date();
-      const timeDifference = endTime - currentTime;
+        <p>ze Auction House of ze Sminem.</p>
 
-      if (timeDifference <= 0) {
-        clearInterval(timerInterval);
-      } else {
-        const hours = Math.floor(timeDifference / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        <p>Here you bid on ze Lord's Reliquia and godly hand-crafted artworks by bringing your $OGSM to the
+            sacrifice.
+            Sminem creates art for you. You bid by burning $OGSM.</p>
 
-        timerElement.textContent = `Auction ends in: ${hours}h ${minutes}m ${seconds}s`;
-      }
-    }
+        <p>Zis is the next iteration of max-bidding-technology.</p>
 
-    // Initial call to set the initial timer state
-    updateTimer();
+        <p>Rules are simple:<br>
+            Highest bidder in given timeframe wins the auctioned item.<br>
+            Second and third place get a consolation prize: SMINEMS NFT</p>
 
-    // Update the timer every second
-    const timerInterval = setInterval(updateTimer, 1000);
-  </script>
+        <p>Pro tip: You can buy $OGSM (CA: 0x9778ac3d5a2f916aa9abf1eb85c207d990ca2655) on f.e. 1inch.io and add
+            send to
+            0x000000000000000000000000000000000000dEaD in order to save on gas.</p>
+    </div>
+    <div id="timer"></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+        // Set the specific end time to November 29, 2023, at 2 AM UTC
+        const endTime = new Date(Date.UTC(2023, 10, 29, 1, 0, 0)); // Months are zero-based
+
+        // Update the timer every second
+        const timerElement = document.getElementById('timer');
+
+        function updateTimer() {
+            const currentTime = new Date();
+            const timeDifference = endTime - currentTime;
+
+            if (timeDifference <= 0) {
+                clearInterval(timerInterval);
+            } else {
+                const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                timerElement.textContent = `Auction ends in: ${hours}h ${minutes}m ${seconds}s`;
+            }
+        }
+
+        // Initial call to set the initial timer state
+        updateTimer();
+
+        // Update the timer every second
+        const timerInterval = setInterval(updateTimer, 1000);
+    </script>
 </body>
-</html>}
+
+</html>
