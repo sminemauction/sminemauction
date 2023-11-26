@@ -187,41 +187,6 @@ function AuctionInfo() {
                 <div className="image-container">
                     <img src={image} alt="Bild 1" width="1280" height="1209"></img>
                 </div>
-                <font color="FFFFFF">
-                        <br></br>
-                        <br></br>
-                        Good morning and welcome to 
-                        <br></br>
-                        <br></br>
-                        Sminemboy's 
-                        <br></br>
-                        Quantumimmortal Surrealty
-                        <br></br>
-                        <br></br>
-                        ze Auction House of ze Sminem. 
-                        <br></br>
-                        <br></br> 
-                        <br></br>
-                        Here you bid on ze Lord's Reliquia and godly hand-crafted artworks by bringing your $OGSM to the sacrifice. 
-                        <br></br>
-                        Sminem creates art for you. You bid by burning $OGSM.
-                        <br></br>
-                        <br></br>
-                        Zis is the next iteration of max-bidding-technology.
-                        <br></br> 
-                        <br></br> 
-                        Rules are simple:
-                        <br></br>
-                        Highest bidder in given timeframe wins the auctioned item.
-                        <br></br>
-                        Second and third place get a consolation prize: <a href="https://opensea.io/collection/sminems">SMINEMS NFT</a>
-                        <br></br>
-                        <br></br>
-                        Pro tip: You can buy $OGSM (CA: 0x9778ac3d5a2f916aa9abf1eb85c207d990ca2655) on f.e. 1inch.io
-                        <br></br>
-                        and add send to 0x000000000000000000000000000000000000dEaD in order to save on gas.
-                        <br></br>
-                    </font>
                     <div className='previousAuction'>
                     <p className='previousAuction'>Previous Auction: </p>
                     </div>
