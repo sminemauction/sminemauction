@@ -2,11 +2,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,7 +25,8 @@ body {
   display: flex;
   place-items: center;
   min-height: 100vh;
-  flex-direction: column; /* Center content vertically on mobile */
+  flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 h1 {
@@ -55,12 +54,11 @@ button:focus-visible {
 }
 
 @media (max-width: 768px) {
-  /* Adjust styles for smaller screens (e.g., mobile devices) */
   body {
-    padding: 20px; /* Add some padding for better readability on small screens */
+    padding: 20px;
   }
 
   h1 {
-    font-size: 2.5em; /* Adjust font size for better readability on small screens */
+    font-size: 2.5em;
   }
 }
