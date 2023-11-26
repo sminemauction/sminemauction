@@ -16,28 +16,17 @@
       background-color: #272526;
       color: #fff;
       font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-      position: relative;
-    }
-
-    .image-container {
-      position: relative;
-      max-width: 100%; /* Set maximum width to 100% to avoid overflow */
-      margin: 0 auto; /* Center the container */
-    }
-
-    .welcome-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #fff;
     }
 
     img {
       display: block;
       margin: 0;
       width: 100%;
+    }
+
+    .image-container {
+      max-width: 100%; /* Set maximum width to 100% to avoid overflow */
+      margin: 0 auto; /* Center the container */
     }
 
     #root {
@@ -52,20 +41,7 @@
 </head>
 <body>
   <div class="image-container">
-    <img src="/assets/A-eDP7CKfo.jpg" alt="Auction Room Image">
-    <div class="welcome-text">
-      <p>Good morning and welcome to</p>
-      <p><strong>Sminemboy's Quantumimmortal Surrealty</strong></p>
-      <p>ze Auction House of ze Sminem.</p>
-      <p>Here you bid on ze Lord's Reliquia and godly hand-crafted artworks by bringing your $OGSM to the sacrifice. Sminem creates art for you. You bid by burning $OGSM.</p>
-      <p>Zis is the next iteration of max-bidding-technology.</p>
-      <p>Rules are simple:</p>
-      <ul>
-        <li>Highest bidder in given timeframe wins the auctioned item.</li>
-        <li>Second and third place get a consolation prize: SMINEMS NFT</li>
-      </ul>
-      <p>Pro tip: You can buy $OGSM (CA: 0x9778ac3d5a2f916aa9abf1eb85c207d990ca2655) on f.e. 1inch.io and add send to 0x000000000000000000000000000000000000dEaD in order to save on gas.</p>
-    </div>
+    <img src="./src/assets/auctionRoom.png" alt="Auction Room Image">
   </div>
   <div id="timer"></div>
   <div id="root"></div>
@@ -99,4 +75,4 @@
     const timerInterval = setInterval(updateTimer, 1000);
   </script>
 </body>
-</html>
+</html>}
