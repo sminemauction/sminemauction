@@ -14,6 +14,8 @@
       flex-direction: column;
       overflow-x: hidden; /* Prevent horizontal scrolling */
       background-color: #272526;
+      color: #fff;
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     }
 
     img {
@@ -30,13 +32,47 @@
     #root {
       /* Add any styles for your root element if needed */
     }
+
+    #timer {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <div class="image-container">
     <img src="./src/assets/auctionRoom.png" alt="Auction Room Image">
   </div>
+  <div id="timer"></div>
   <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    // Set the specific end time (year, month (0-indexed), day, hour, minute, second)
+    const endTime = new Date(2023, 0, 1, 12, 0, 0); // Example: January 1, 2023, 12:00 PM
+
+    // Update the timer every second
+    const timerElement = document.getElementById('timer');
+
+    function updateTimer() {
+      const currentTime = new Date();
+      const timeDifference = endTime - currentTime;
+
+      if (timeDifference <= 0) {
+        timerElement.textContent = 'Auction has ended!';
+        clearInterval(timerInterval);
+      } else {
+        const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        timerElement.textContent = `Time until auction ends: ${hours}h ${minutes}m ${seconds}s`;
+      }
+    }
+
+    // Initial call to set the initial timer state
+    updateTimer();
+
+    // Update the timer every second
+    const timerInterval = setInterval(updateTimer, 1000);
+  </script>
 </body>
 </html>
