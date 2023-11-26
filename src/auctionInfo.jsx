@@ -317,7 +317,7 @@ function AuctionInfo() {
                     </div>
                 </div>
             </div>
-        }
+        
         </>
     )
 }
