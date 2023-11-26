@@ -1,28 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/auctionRoom.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sminem Auction</title>
-   
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="./src/assets/auctionRoom.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sminem Auction</title>
   <style>
-      img {
-  display: block;
-  margin: 0;
-  width: 100%;
-}
+    body {
+      margin: 0;
+      display: flex;
+      place-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      background-color: #272526;
+    }
 
-.image-container {
-  max-width: 100%; /* Set maximum width to 100% to avoid overflow */
-  margin: 0 auto; /* Center the container */
-}
+    img {
+      display: block;
+      margin: 0;
+      width: 100%;
+    }
+
+    .image-container {
+      max-width: 100%; /* Set maximum width to 100% to avoid overflow */
+      margin: 0 auto; /* Center the container */
+    }
+
+    #root {
+      /* Add any styles for your root element if needed */
+    }
   </style>
-
-  </head>
-  <body style="background-color: #272526"> 
- 
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+</head>
+<body>
+  <div class="image-container">
+    <img src="./src/assets/auctionRoom.png" alt="Auction Room Image">
+  </div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>
