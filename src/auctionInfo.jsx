@@ -221,6 +221,7 @@ function AuctionInfo() {
                         <br></br>
                         and add send to 0x000000000000000000000000000000000000dEaD in order to save on gas.
                         <br></br>
+                    ><a href="https://foundation.app/collection/sminart">see older Sminem works</a>
                     </font>
                     <div className='previousAuction'>
                     <p className='previousAuction'>Previous Auction: </p>
