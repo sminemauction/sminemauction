@@ -223,8 +223,22 @@ function AuctionInfo() {
                         <br></br>
                     </font>
                     <div className='previousAuction'>
-                    <p className='previousAuction'><a href="https://foundation.app/collection/sminart">see older Sminem works</a> </p>
+                    <p className='previousAuction'>Previous Auction: </p>
                     </div>
+                    <div className='previousLeaderboard'>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>1st - {previousFirst.address}</p>
+                        <p className='leaderBid'>Bid - {parseFloat(previousFirst.bid).toFixed(2)}M</p>
+                    </div>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>2nd - {previousSecond.address}</p>
+                        <p className='leaderBid'>Bid - {parseFloat(previousSecond.bid).toFixed(2)}M</p>
+                    </div>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>3rd - {previousThird.address}</p>
+                        <p className='leaderBid'>Bid - {parseFloat(previousThird.bid).toFixed(2)}M</p>
+                    </div>
+                </div>
             </div>
         : 
             <div>
