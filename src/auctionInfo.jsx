@@ -223,23 +223,7 @@ function AuctionInfo() {
                         <br></br>
                     ><a href="https://foundation.app/collection/sminart">see older Sminem works</a>
                     </font>
-                    <div className='previousAuction'>
-                    <p className='previousAuction'>Previous Auction: </p>
-                    </div>
-                    <div className='previousLeaderboard'>
-                    <div className='leaderItem'>
-                        <p className='leaderItem'>1st - {previousFirst.address}</p>
-                        <p className='leaderBid'>Bid - {parseFloat(previousFirst.bid).toFixed(2)}M</p>
-                    </div>
-                    <div className='leaderItem'>
-                        <p className='leaderItem'>2nd - {previousSecond.address}</p>
-                        <p className='leaderBid'>Bid - {parseFloat(previousSecond.bid).toFixed(2)}M</p>
-                    </div>
-                    <div className='leaderItem'>
-                        <p className='leaderItem'>3rd - {previousThird.address}</p>
-                        <p className='leaderBid'>Bid - {parseFloat(previousThird.bid).toFixed(2)}M</p>
-                    </div>
-                </div>
+
             </div>
         : 
             <div>
@@ -302,7 +286,21 @@ function AuctionInfo() {
                         and add send to 0x000000000000000000000000000000000000dEaD in order to save on gas.
                         <br></br>
                     </font>
-
+                    <font color="FFFFFF">Previous Auction: </font>
+                    <div className='leaderBoard'>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>1st - Loading....</p>
+                        <p className='leaderBid'>Bid - Loading.... </p>
+                    </div>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>2nd - Loading....</p>
+                        <p className='leaderBid'>Bid - Loading.... </p>
+                    </div>
+                    <div className='leaderItem'>
+                        <p className='leaderItem'>3rd - Loading....</p>
+                        <p className='leaderBid'>Bid - Loading.... </p>
+                    </div>
+                </div>
             </div>
         }
         </>
